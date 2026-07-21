@@ -1,0 +1,196 @@
+/* Light Ministries Church — shared styles */
+:root{
+  --ink:#33312e;
+  --muted:#6b6459;
+  --blue:#1c3a5e;
+  --blue-deep:#152c47;
+  --gold:#b8892b;
+  --gold-soft:#c9a961;
+  --ivory:#fbf8f2;
+  --cream:#f3ecdd;
+  --line:#e3d9c4;
+  --white:#ffffff;
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Lora',Georgia,'Times New Roman',serif;
+  color:var(--ink);
+  background:var(--ivory);
+  line-height:1.75;
+  font-size:18px;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:var(--blue);font-weight:700}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--gold)}
+img{max-width:100%;height:auto}
+
+/* Header / nav */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,248,242,.96);
+  backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1080px;margin:0 auto;padding:.65rem 1.25rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.7rem;min-width:0}
+.brand .mark{
+  width:40px;height:40px;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%,var(--gold-soft),var(--gold));
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;flex:none;
+  box-shadow:0 2px 6px rgba(184,137,43,.35);
+}
+.brand .name{font-family:'Playfair Display',serif;font-weight:700;color:var(--blue);font-size:1.1rem;line-height:1.1}
+.brand .tag{display:block;font-family:'Lora',serif;font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:.35rem .55rem;font-size:1.1rem;color:var(--blue);cursor:pointer}
+.nav-links{display:flex;flex-wrap:wrap;gap:.15rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  display:block;padding:.4rem .7rem;border-radius:8px;font-size:.95rem;color:var(--ink);
+}
+.nav-links a:hover{background:var(--cream);color:var(--blue)}
+.nav-links a.active{color:var(--blue);font-weight:700;box-shadow:inset 0 -2px 0 var(--gold)}
+
+/* Hero */
+.hero{
+  background:linear-gradient(150deg,var(--blue) 0%,var(--blue-deep) 100%);
+  color:#f7f3ea;text-align:center;padding:4.5rem 1.5rem 4rem;
+}
+.hero .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--gold-soft);margin:0 0 1rem}
+.hero h1{color:#fff;font-size:2.9rem;margin:0 0 .6rem}
+.hero .lead{font-size:1.2rem;max-width:640px;margin:0 auto 1.7rem;color:#e6ddcb}
+.hero .divider{width:70px;height:3px;background:var(--gold);border:none;margin:0 auto 1.6rem;border-radius:2px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:center;font-size:1rem;color:#dcd2be}
+.hero-meta strong{color:#fff}
+
+/* Buttons */
+.btn{
+  display:inline-block;background:var(--gold);color:#fff;font-family:'Lora',serif;
+  padding:.7rem 1.5rem;border-radius:999px;font-size:1rem;font-weight:600;
+  box-shadow:0 3px 10px rgba(184,137,43,.35);transition:transform .12s ease,background .2s;
+}
+.btn:hover{background:#a6781f;color:#fff;transform:translateY(-1px)}
+.btn.secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);box-shadow:none}
+.btn.secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.7rem}
+
+/* Layout */
+main{display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:3.2rem 1.5rem}
+.wrap.narrow{max-width:720px}
+.page-head{text-align:center;margin-bottom:2.4rem}
+.page-head .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;color:var(--gold);margin:0 0 .6rem}
+.page-head h1{font-size:2.4rem;margin:0}
+.page-head p{color:var(--muted);max-width:620px;margin:.8rem auto 0}
+.section{padding:1rem 0}
+.prose p{margin:0 0 1.15rem}
+.prose h2{font-size:1.7rem;margin:2.4rem 0 1rem}
+.prose h3{font-size:1.25rem;margin:1.8rem 0 .5rem;color:var(--blue-deep)}
+blockquote{
+  margin:1.6rem 0;padding:1rem 1.4rem;border-left:4px solid var(--gold);
+  background:var(--cream);border-radius:0 10px 10px 0;font-style:italic;color:#4a4436;
+}
+.scripture{font-style:italic;color:#4a4436}
+
+/* Feature cards on home */
+.features{max-width:1000px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.6rem;
+  box-shadow:0 2px 10px rgba(28,58,94,.05);transition:transform .12s ease,box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(28,58,94,.1)}
+.card h3{margin:.2rem 0 .5rem;font-size:1.25rem}
+.card p{margin:0 0 .9rem;color:var(--muted);font-size:.98rem}
+.card .more{font-weight:600;color:var(--gold);font-size:.95rem}
+.band{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band .wrap{text-align:center}
+
+/* Beliefs */
+.belief-list{list-style:none;padding:0;margin:1.5rem 0}
+.belief-list li{padding:.7rem 0 .7rem 1.9rem;border-bottom:1px solid var(--line);position:relative}
+.belief-list li:before{content:"✦";position:absolute;left:0;color:var(--gold)}
+
+/* Articles index */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-top:1rem}
+.article-card{
+  background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.3rem 1.35rem;
+  display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(28,58,94,.05);transition:transform .12s,box-shadow .2s;
+}
+.article-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(28,58,94,.1)}
+.article-card h3{font-size:1.2rem;margin:0 0 .5rem}
+.article-card p{color:var(--muted);font-size:.93rem;margin:0 0 1rem;flex:1}
+.article-card .more{color:var(--gold);font-weight:600;font-size:.9rem}
+
+/* Article page */
+.article-body{max-width:720px}
+.article-body .back{display:inline-block;margin-bottom:1.2rem;font-size:.9rem}
+.byline{color:var(--muted);font-style:italic;margin:-.4rem 0 1.8rem;font-size:.98rem}
+
+/* Devotionals */
+.dev-intro{max-width:720px;margin:0 auto 2rem;text-align:center;color:var(--muted)}
+.dev-entry{max-width:720px;margin:0 auto 1rem;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.dev-entry summary{
+  cursor:pointer;list-style:none;padding:1rem 1.3rem;font-family:'Playfair Display',serif;
+  font-weight:700;color:var(--blue);font-size:1.15rem;display:flex;justify-content:space-between;align-items:center;
+}
+.dev-entry summary:hover{background:var(--cream)}
+.dev-entry summary::-webkit-details-marker{display:none}
+.dev-entry summary .chev{color:var(--gold);font-size:.9rem;transition:transform .2s}
+.dev-entry[open] summary .chev{transform:rotate(90deg)}
+.dev-entry .dev-text{padding:.2rem 1.3rem 1.3rem}
+.dev-entry .dev-text p{margin:0 0 1rem;color:#4a4436}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;margin-top:1.5rem}
+.contact-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.5rem;text-align:center}
+.contact-card .ico{font-size:1.6rem;color:var(--gold)}
+.contact-card h3{margin:.5rem 0 .4rem;font-size:1.15rem}
+.contact-card p{margin:0;color:var(--muted)}
+
+/* Footer */
+.site-footer{background:var(--blue-deep);color:#cdd6e2;margin-top:1rem}
+.footer-inner{max-width:1000px;margin:0 auto;padding:2.6rem 1.5rem 1.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.6rem}
+.site-footer h4{color:#fff;font-size:1.05rem;margin:0 0 .6rem}
+.site-footer a{color:#e3d9c4}
+.site-footer a:hover{color:var(--gold-soft)}
+.site-footer p{margin:.2rem 0;font-size:.95rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:1rem;font-size:.85rem;color:#9aa7b8}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin:.25rem 0}
+
+@media (max-width:720px){
+  body{font-size:17px}
+  .hero h1{font-size:2.2rem}
+  .nav-toggle{display:block}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:var(--ivory);border-bottom:1px solid var(--line);padding:.5rem 1rem 1rem;gap:.1rem;
+  }
+  .nav-links.open{display:flex}
+  .nav-inner{position:relative}
+}
+
+/* Forms / Stay Connected */
+.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:960px;margin:0 auto}
+.form-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.8rem;box-shadow:0 2px 12px rgba(28,58,94,.06)}
+.form-card h2{font-size:1.5rem;margin:.1rem 0 .3rem}
+.form-card .sub{color:var(--muted);font-size:.97rem;margin:0 0 1.2rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.9rem;font-weight:600;color:var(--blue-deep);margin-bottom:.35rem}
+.field input,.field textarea,.field select{
+  width:100%;padding:.7rem .85rem;border:1px solid var(--line);border-radius:9px;
+  font-family:'Lora',serif;font-size:1rem;color:var(--ink);background:#fffdf9;
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,43,.15)}
+.field textarea{min-height:110px;resize:vertical}
+.form-card .btn{width:100%;text-align:center;border:none;cursor:pointer;font-size:1.02rem;margin-top:.3rem}
+.consent{font-size:.82rem;color:var(--muted);margin:.9rem 0 0;line-height:1.5}
+.radio-row{display:flex;gap:1.2rem;margin-top:.2rem}
+.radio-row label{display:flex;align-items:center;gap:.4rem;font-weight:400;color:var(--ink);cursor:pointer}
+.radio-row input{width:auto}
+@media (max-width:720px){.connect-grid{grid-template-columns:1fr}}

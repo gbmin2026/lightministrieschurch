@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stay Connected — Light Ministries Church</title>
+<meta name="description" content="Sign up to receive the Light Ministries Church livestream and updates, or request a call or visit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">L</span>
+      <span><span class="name">Light Ministries Church</span><span class="tag">Lewistown, Pennsylvania</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upper-room.html">The Upper Room</a></li>
+      <li><a href="beliefs.html">What We Believe</a></li>
+      <li><a href="devotionals.html">Devotionals</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="connect.html" class="active">Connect</a></li>
+      <li><a href="contact.html">Visit Us</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<div class="wrap">
+  <div class="page-head"><p class="eyebrow">We'd Love to Hear From You</p><h1>Stay Connected</h1>
+    <p>Join our list to receive the livestream link and church updates, or ask Pastor Gary to reach out with a call or a visit.</p></div>
+
+  <div class="connect-grid">
+
+    <!-- ============================================================
+         JOIN OUR LIST
+         TO CONNECT TO BREVO: replace  action="#"  below with the form
+         URL from your Brevo "Light Ministries Church" list signup form.
+         ============================================================ -->
+    <div class="form-card">
+      <h2>Join Our List</h2>
+      <p class="sub">Get the livestream link and stay up to date with what's happening at the church.</p>
+      <form action="#" method="post" onsubmit="return false;">
+        <div class="field">
+          <label for="j-name">First Name</label>
+          <input id="j-name" name="FIRSTNAME" type="text" placeholder="Your first name">
+        </div>
+        <div class="field">
+          <label for="j-email">Email Address <span style="color:var(--gold)">*</span></label>
+          <input id="j-email" name="EMAIL" type="email" required placeholder="you@example.com">
+        </div>
+        <button class="btn" type="submit">Join the List</button>
+        <p class="consent">By joining, you agree to receive emails from Light Ministries Church. You can unsubscribe at any time.</p>
+      </form>
+    </div>
+
+    <!-- ============================================================
+         REQUEST A CALL OR VISIT
+         TO CONNECT TO BREVO: replace  action="#"  below with the form
+         URL from your Brevo "Call / Visit Requests" form (or a form
+         service that emails you). See the deployment notes.
+         ============================================================ -->
+    <div class="form-card">
+      <h2>Request a Call or Visit</h2>
+      <p class="sub">Would you like Pastor Gary to give you a call or stop by? Let us know and we'll be in touch.</p>
+      <form action="#" method="post" onsubmit="return false;">
+        <div class="field">
+          <label for="r-name">Your Name <span style="color:var(--gold)">*</span></label>
+          <input id="r-name" name="NAME" type="text" required placeholder="First and last name">
+        </div>
+        <div class="field">
+          <label for="r-phone">Phone Number</label>
+          <input id="r-phone" name="PHONE" type="tel" placeholder="(   )   -    ">
+        </div>
+        <div class="field">
+          <label for="r-email">Email Address</label>
+          <input id="r-email" name="EMAIL" type="email" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label>I would like…</label>
+          <div class="radio-row">
+            <label><input type="radio" name="REQUEST" value="call" checked> A phone call</label>
+            <label><input type="radio" name="REQUEST" value="visit"> A visit</label>
+            <label><input type="radio" name="REQUEST" value="either"> Either</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="r-msg">Anything you'd like us to know?</label>
+          <textarea id="r-msg" name="MESSAGE" placeholder="Share a prayer request, a question, or a good time to reach you."></textarea>
+        </div>
+        <button class="btn" type="submit">Send Request</button>
+        <p class="consent">Your information is kept private and used only so we can reach out to you.</p>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="prose" style="max-width:680px;margin:2.6rem auto 0;text-align:center">
+    <p class="scripture">“Come and hear what God has for YOU!”</p>
+    <p style="color:var(--muted);font-size:.95rem">Prefer to talk now? Call us at (814) 857-1455, or join our livestream on Facebook at <strong>Light Ministries Church</strong>.</p>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Light Ministries Church</h4>
+      <p>181 Caldwell Hill Road, Lewistown, PA 17044</p>
+      <p>Phone: (814) 857-1455</p>
+      <p>Services: Sundays at 10:00 AM</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="upper-room.html">The Upper Room</a></li><li><a href="beliefs.html">What We Believe</a></li><li><a href="devotionals.html">Devotionals</a></li><li><a href="articles.html">Articles</a></li><li><a href="connect.html">Connect</a></li><li><a href="contact.html">Visit Us</a></li></ul>
+    </div>
+    <div>
+      <h4>Who We Are</h4>
+      <p>A family-minded, community-minded, non-denominational, Spirit-filled, Bible-believing church teaching total commitment to the Lordship of Jesus Christ.</p>
+      <p>Pastor: Rev. Gary Bailey</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Light Ministries Church · Lewistown, PA · “The Church of the Living God, the pillar and ground of the Truth.”</div>
+</footer>
+</body>
+</html>
