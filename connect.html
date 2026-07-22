@@ -67,33 +67,37 @@
     <div class="form-card">
       <h2>Request a Call or Visit</h2>
       <p class="sub">Would you like Pastor Gary to give you a call or stop by? Let us know and we'll be in touch.</p>
-      <form action="#" method="post" onsubmit="return false;">
+      <form action="https://formsubmit.co/gbrtwm@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Light Ministries Church — Call/Visit Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field">
           <label for="r-name">Your Name <span style="color:var(--gold)">*</span></label>
-          <input id="r-name" name="NAME" type="text" required placeholder="First and last name">
+          <input id="r-name" name="Name" type="text" required placeholder="First and last name">
         </div>
         <div class="field">
           <label for="r-phone">Phone Number</label>
-          <input id="r-phone" name="PHONE" type="tel" placeholder="(   )   -    ">
+          <input id="r-phone" name="Phone" type="tel" placeholder="(   )   -    ">
         </div>
         <div class="field">
           <label for="r-email">Email Address</label>
-          <input id="r-email" name="EMAIL" type="email" placeholder="you@example.com">
+          <input id="r-email" name="Email" type="email" placeholder="you@example.com">
         </div>
         <div class="field">
           <label>I would like…</label>
           <div class="radio-row">
-            <label><input type="radio" name="REQUEST" value="call" checked> A phone call</label>
-            <label><input type="radio" name="REQUEST" value="visit"> A visit</label>
-            <label><input type="radio" name="REQUEST" value="either"> Either</label>
+            <label><input type="radio" name="I would like" value="A phone call" checked> A phone call</label>
+            <label><input type="radio" name="I would like" value="A visit"> A visit</label>
+            <label><input type="radio" name="I would like" value="Either"> Either</label>
           </div>
         </div>
         <div class="field">
           <label for="r-msg">Anything you'd like us to know?</label>
-          <textarea id="r-msg" name="MESSAGE" placeholder="Share a prayer request, a question, or a good time to reach you."></textarea>
+          <textarea id="r-msg" name="Message" placeholder="Share a prayer request, a question, or a good time to reach you."></textarea>
         </div>
         <button class="btn" type="submit">Send Request</button>
-        <p class="consent">Your information is kept private and used only so we can reach out to you.</p>
+        <p class="consent">Your information is kept private and used only so we can reach out to you. We'll never share your details.</p>
       </form>
     </div>
 
