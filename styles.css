@@ -162,6 +162,15 @@ blockquote{
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:1rem;font-size:.85rem;color:#9aa7b8}
 .footer-links{list-style:none;padding:0;margin:0}
 .footer-links li{margin:.25rem 0}
+.nav-links a.give-link,.footer-links a.give-link{
+  background:var(--gold);color:#fff;font-weight:700;
+  padding:.4rem 1rem;border-radius:999px;
+  box-shadow:0 2px 8px rgba(184,137,43,.35);
+  transition:transform .12s ease,background .2s;
+}
+.nav-links a.give-link:hover{background:#a6781f;color:#fff;transform:translateY(-1px)}
+.footer-links a.give-link{display:inline-block;margin-top:.3rem}
+.footer-links a.give-link:hover{background:#a6781f;color:#fff}
 
 @media (max-width:720px){
   body{font-size:17px}
